@@ -4,9 +4,14 @@
   <p align="center">
     ZeRui Zhang, ZhiChao Sun, ZeLong Liu, Bo Du, Zhou Zhao, YongChao Xu
   </p>
+  <h3 align="center">Paper
+  <h2 align="left">MICCAI 2024(Early Accept)</h2>
   <div align="center"></div>
+
 </p>
 
+
+  
 <p align="center">
     <img src="images/pipeline_whole.png" width="75%"> <br>
 
