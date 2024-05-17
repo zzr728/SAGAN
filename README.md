@@ -46,7 +46,8 @@ bash test.sh
 ## Pretraining Model Download
 This repository provides pre-trained SAGAN model checkpoints that can be downloaded and used for medical anomaly detection tasks.The available pre-trained models include:
 
- Model Descriptions | Model Weights | --- | --- | ---: |
+ Model Descriptions | Model Weights | 
+|--- | --- |
 | SAGAN RSNA-finetuned | [SAGAN_G_RSNA.ckpt](https://drive.google.com/file/d/1AwFg6qEJVT2exmyWStvk32sEmboYjcth/view?usp=drive_link) 
 | SAGAN VinDr-CXR-finetuned | [SAGAN_G_VinDr-CXR.ckpt](https://drive.google.com/file/d/1qqAa8TdrFRIgwzn6oTsDRhOMEswNCede/view?usp=drive_link) 
 | SAGAN LAG-finetuned | [SAGAN_G_LAG.ckpt](https://drive.google.com/file/d/15P7zu_I4oZluDIgjqgSNuDajqAfFzhxk/view?usp=drive_link) 
