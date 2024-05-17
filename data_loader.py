@@ -19,7 +19,7 @@ def parallel_load(img_dir, img_list, img_size, verbose=0):
             (img_size, img_size), resample=Image.BILINEAR))(file) for file in img_list)
     
 class dataset_train(data.Dataset):
-    def __init__(self, main_path, img_size=64, transform=None,mode='train'):
+    def __init__(self, main_path, img_size=64, transform=None,mode='train',ar = 0.6):
         super(dataset_train, self).__init__()
         self.root = main_path
         self.datasetA = []
@@ -34,15 +34,17 @@ class dataset_train(data.Dataset):
         train_normal = data_dict["train"]["0"]
         self.datasetB += parallel_load(os.path.join(self.root, "images"), train_normal, img_size)
         self.num_images = len(self.datasetB)
+        abnormal_num = int(self.num_images * ar)
+        normal_num = self.num_images - abnormal_num
         unlabeled_normal_l = data_dict["train"]["unlabeled"]["0"]
         unlabeled_abnormal_l = data_dict["train"]["unlabeled"]["1"]
-        train_unlabeled_l = unlabeled_abnormal_l+ unlabeled_normal_l
+        train_unlabeled_l = unlabeled_abnormal_l[:abnormal_num] + unlabeled_normal_l[:normal_num]
 
         self.datasetA += parallel_load(os.path.join(self.root, "images"), train_unlabeled_l, img_size)
         
         print("Loaded {} normal images, "
                 "{} (unlabeled) normal images, "
-                "{} (unlabeled) abnormal images.".format(len(train_normal), len(unlabeled_normal_l), len(unlabeled_abnormal_l)))
+                "{} (unlabeled) abnormal images.".format(len(train_normal), normal_num, abnormal_num))
         
 
     def __getitem__(self, index):
