@@ -142,7 +142,7 @@ class Solver(object):
     def train(self):
 
         # Set data loader.
-        if self.dataset in ['brain','rsna','vincxr','lag']:
+        if self.dataset in ['rsna','vincxr','lag']:
             data_loader = self.data_loader
 
         # Fetch fixed inputs for debugging.
