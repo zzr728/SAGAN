@@ -142,7 +142,7 @@ def central_crop(img):
 
 
 def get_loader(dataset,bs,img_size,workers=1,mode = 'train'):
-    root_path = os.path.join("/data/rui/", "Med-AD_v1_D/")
+    root_path = os.path.join("/data/", "your dataset path")
     if dataset == 'rsna':
         print("Dataset:{}".format(dataset))
         data_path = os.path.join(root_path,"RSNA/")
@@ -160,12 +160,12 @@ def get_loader(dataset,bs,img_size,workers=1,mode = 'train'):
                 transforms.ToTensor(),
                 transforms.Normalize((0.5,), (0.5,))
         ])
-    if mode == "train" or mode == 'train_dual':
+    if mode == "train"
         dset = dataset_train(main_path = data_path,img_size=img_size,transform=transform,mode = mode)
     else:
         dset = dataset_test(main_path = data_path,img_size=img_size,transform=transform,mode = mode)
 
-    train_flag =  True if mode== 'train' or mode == 'train_dual' else False
+    train_flag =  True if mode== 'train' else False
     dataloader = data.DataLoader(dset,bs,shuffle=train_flag,drop_last=train_flag,num_workers=workers,pin_memory=True)
 
     return dataloader
