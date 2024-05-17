@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 ## Data Preparation
 Download the well-processed Med-AD benchmark from: [Google Drive](https://drive.google.com/file/d/1ijdaVBNdkYP4h0ClYFYTq9fN1eHoOSa6/view?usp=sharing) | [OneDrive](https://hkustconnect-my.sharepoint.com/:u:/g/personal/ycaibt_connect_ust_hk/EdCbKrjjRMlKi-1AotcAfkoB_jmbTQ2gnQChltgh7l8xVQ?e=t17t2S). <br>
-(RSNA,VinDr-CXR and LAG are one of the benchmarks, and should be **only applied for academic research**.)
+(RSNA, VinDr-CXR and LAG are one of the benchmarks, and should be **only applied for academic research**.)
 
 ## Training
 ```bash
