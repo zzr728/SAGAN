@@ -26,13 +26,10 @@ def main(config):
     solver = Solver(data_loader, config)
     
     if config.mode == 'train':
-        if config.dataset in ['brain','rsna','vincxr','lag']:
+        if config.dataset in ['rsna','vincxr','lag']:
             solver.train()
-    elif config.mode == 'train_dual':
-        if config.dataset in ['brain','rsna','vincxr','lag']:
-            solver.train_dual()
     elif config.mode == 'test':
-        if config.dataset in ['brain','rsna','vincxr','lag']: 
+        if config.dataset in ['rsna','vincxr','lag']: 
             solver.test()
 
 
@@ -69,9 +66,9 @@ if __name__ == '__main__':
     parser.add_argument('--mode', type=str, default='train', choices=['train','test'])
 
     # Directories.
-    parser.add_argument('--save_dir', type=str, default='brain/save_test')
-    parser.add_argument('--model_save_dir', type=str, default='brain/models')
-    parser.add_argument('--sample_dir', type=str, default='brain/samples')
+    parser.add_argument('--save_dir', type=str, default='rsna/save_test')
+    parser.add_argument('--model_save_dir', type=str, default='rsna/models')
+    parser.add_argument('--sample_dir', type=str, default='rsna/samples')
 
     # Step size.
     parser.add_argument('--log_step', type=int, default=1000)
