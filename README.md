@@ -8,10 +8,10 @@
 </p>
 
 <p align="center">
-    <img src="images/pipeline_whole.png" width="50%"> <br>
+    <img src="images/pipeline_whole.png" width="75%"> <br>
 
 <p align="center">
-    <img src="images/pipeline_G.png" width="50%"> <br>
+    <img src="images/pipeline_G.png" width="75%"> <br>
 
 ## Install
 1. Clone this repository and navigate to SAGAN folder
