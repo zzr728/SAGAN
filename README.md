@@ -34,6 +34,10 @@ Download the well-processed Med-AD benchmark from: [Google Drive](https://drive.
 (The benchmark is organized using 4 public datasets, and should be **only applied for academic research**.)
 
 ## Training
-
+```bash
+bash train.sh
+```
 ## Evalution
-
+```bash
+bash test.sh
+```
