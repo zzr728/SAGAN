@@ -2,7 +2,7 @@
   <h1 align="center">Spatial-aware Attention Generative Adversarial Network for Semi-supervised     
    Anomaly Detection in Medical Image</h1>
   <p align="center">
-    ZeRui Zhang, ZhiChao Sun, ZeLong Liu, Bo Du, Zhou Zhao, YongChao Xu
+    Zerui Zhang, Zhichao Sun, Zelong Liu, Bo Du, Zhou Zhao, Yongchao Xu
   </p>
   <h3 align="center">Paper
   <h2 align="left">MICCAI 2024(Early Accept)</h2>
